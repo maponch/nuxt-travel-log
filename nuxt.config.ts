@@ -20,5 +20,6 @@ export default defineNuxtConfig({
   },
   colorMode: {
     dataValue: "theme",
+    preference: "system",
   },
 });
