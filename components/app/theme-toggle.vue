@@ -3,6 +3,9 @@ const colorMode = useColorMode();
 
 const isDark = computed({
   get() {
+    if (colorMode.preference === "system") {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
     return colorMode.value === "dark";
   },
   set(value) {
